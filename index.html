@@ -6,10 +6,10 @@
 	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
-	<script src="Converter.js" defer></script>
+	<script src="converter.js" defer></script>
 </head>
 <body class="bg-gray-200">
-<div x-data="{input: '', output: ''}">
+<div x-data="{input: 'مَرْحَبًا بِالْعَالَمِ', output: 'ﻡَﻟﺍَﻋْﻟﺍِﺑ ﺍًﺑَﺣْﺭَﻣ'}">
 	<div class="bg-indigo-800 text-white py-4 px-8 shadow">
 		<div class="container mx-auto max-w-5xl px-6 text-center text-2xl relative">
 			<div class="absolute flex mr-4 gap-4">
@@ -37,7 +37,7 @@
 					<label for="input">Enter text</label>
 					<label for="input">أَدْخَلْ نَصَآ</label>
 				</div>
-				<textarea @input="output=linkText($event.target.value)['reverse']()" style="direction:rtl" class="w-full text-xl p-4 shadow rounded-lg focus:outline-none focus:shadow-outline" rows="10"
+				<textarea @input="output=linkText($event.target.value)" style="direction:rtl" class="w-full text-xl p-4 shadow rounded-lg focus:outline-none focus:shadow-outline" rows="10"
 				          id="input" x-text="input">input</textarea>
 			</div>
 			<div class="w-full mb-5">
@@ -45,7 +45,7 @@
 					<label for="output">Converted text</label>
 					<label for="output">النَّصُّ الْمُحَوِّلُ</label>
 				</div>
-				<textarea @input="input=linkText($event.target.value)['reverse']()" style="direction:rtl" class="w-full text-xl p-4 shadow rounded-lg focus:outline-none focus:shadow-outline" rows="10"
+				<textarea readonly style="direction:rtl" class="w-full text-xl p-4 shadow rounded-lg focus:outline-none focus:shadow-outline" rows="10"
 				          id="output" x-text="output">output</textarea>
 			</div>
 			
