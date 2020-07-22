@@ -28,29 +28,29 @@
 				</a>
 			</div>
 			
-			<div class="w-full">مُنَسِّقُ النَّصِّ الْعَرَبِيِّ</div>
+			<div class="w-full font-sans">مُنَسِّقُ النَّصِّ الْعَرَبِيِّ</div>
 		</div>
 	</div>
 	<div class="pt-6">
 		<div class="container px-6 flex mx-auto max-w-5xl flex-col">
 			<div class="w-full mb-5">
 				<div class="flex justify-between mb-2">
-					<label for="input">Enter text</label>
-					<label for="input">أَدْخَلْ نَصَآ</label>
+					<label for="input" class="font-sans">Enter text</label>
+					<label for="input" class="font-sans">أَدْخَلْ نَصَآ</label>
 				</div>
 				<textarea @input="output=linkText($event.target.value)" style="direction:rtl" class="w-full text-xl p-4 shadow rounded-lg focus:outline-none focus:shadow-outline" rows="10"
 				          id="input" x-text="input">input</textarea>
 			</div>
 			<div class="w-full mb-5">
 				<div class="flex justify-between mb-2">
-					<label for="output">Converted text</label>
-					<label for="output">النَّصُّ الْمُحَوِّلُ</label>
+					<label for="output" class="font-sans">Converted text</label>
+					<label for="output" class="font-sans">النَّصُّ الْمُحَوِّلُ</label>
 				</div>
 				<textarea readonly style="direction:rtl" class="w-full text-xl p-4 shadow rounded-lg focus:outline-none focus:shadow-outline" rows="10"
 				          id="output" x-text="output">output</textarea>
 			</div>
 			
-			<div class="mb-10">A desktop version is available at <a class="italic underline" href="https://github.com/samirdjelal/bidirectional">https://github.com/samirdjelal/bidirectional</a></div>
+			<div class="mb-10">A desktop version is available at <a class="italic underline" target="_blank" href="https://github.com/samirdjelal/bidirectional">https://github.com/samirdjelal/bidirectional</a></div>
 		</div>
 	</div>
 
